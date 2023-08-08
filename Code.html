@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP Server Punktesystem</title>
+    <style>
+        /* ... bisheriger CSS-Stil ... */
+
+        #open-add-player-popup {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        #open-add-player-popup:hover {
+            text-decoration: none;
+        }
+
+        #add-player-popup {
+            /* ... bisheriger Stil des Popups ... */
+            display: none;
+        }
+
+        .player-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RP Server Punktesystem</h1>
+        <a href="#" id="open-add-player-popup">&#x2299;</a>
+    </header>
+    <div class="container">
+        <div class="player-list">
+            <!-- Spielerliste hier auflisten -->
+        </div>
+    </div>
+    <div id="add-player-popup">
+        <h2>Spieler hinzufügen</h2>
+        <form id="add-player-form-popup">
+            <label for="first-name-popup">Vorname:</label>
+            <input type="text" id="first-name-popup" name="first-name-popup" required><br>
+            <label for="last-name-popup">Nachname:</label>
+            <input type="text" id="last-name-popup" name="last-name-popup" required><br>
+            <label for="reason-popup">Grund:</label>
+            <input type="text" id="reason-popup" name="reason-popup" required><br>
+            <label for="points-popup">Punkte:</label>
+            <input type="number" id="points-popup" name="points-popup" required><br>
+            <button type="submit">Spieler hinzufügen</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
